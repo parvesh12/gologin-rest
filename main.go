@@ -18,6 +18,8 @@ func main() {
 	//routes
 	mux.HandleFunc("/", api.Login).Methods("POST")
 
+	mux.HandleFunc("/register", api.Register).Methods("POST")
+
 	fmt.Printf("Starting server on port:%s\n", os.Getenv("PORT"))
 
 	src := http.Server{

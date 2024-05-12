@@ -15,12 +15,12 @@ type Loginreq struct {
 }
 
 type TblUser struct {
-	Id        int `gorm:"primarykey"`
-	FirstName string
-	LastName  string
-	UserName  string
-	Emailid   string
-	Password  string
+	Id        int    `gorm:"primarykey" json:"id"`
+	FirstName string `json:"firstname"`
+	LastName  string `json:"lastname"`
+	UserName  string `json:"username"`
+	Email     string `json:"emailid"`
+	Password  string `json:"password"`
 }
 
 var db = config.SetupDB()
